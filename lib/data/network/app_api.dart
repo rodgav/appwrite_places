@@ -5,7 +5,7 @@ import 'package:appwrite/models.dart';
 import 'package:appwrite_places/app/app_preferences.dart';
 import 'package:appwrite_places/app/constants.dart';
 import 'package:appwrite_places/data/request/request.dart';
-import 'package:appwrite_places/domain/model/latitude_longitude.dart';
+import 'package:mapbox_gl/mapbox_gl.dart';
 import 'package:http_parser/http_parser.dart';
 
 class AppServiceClient {
@@ -47,6 +47,9 @@ class AppServiceClient {
 
   Future deleteFile(String idFile) =>
       _storage.deleteFile(bucketId: Constant.buckedId, fileId: idFile);
+
+  Future<DocumentList> typeBusiness() =>
+      _database.listDocuments(collectionId: Constant.typeBusiness);
 
   Future<DocumentList> places(LatLng north, LatLng east, LatLng south,
           LatLng west, String typeBusiness) =>

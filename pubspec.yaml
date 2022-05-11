@@ -46,9 +46,9 @@ dependencies:
   go_router: ^3.0.1
   intl: ^0.17.0
   flutter_phoenix: ^1.0.0
-  file_picker: ^4.5.1
   geolocator: ^8.2.1
   permission_handler: ^9.2.0
+  mapbox_gl: ^0.15.0
 
 dev_dependencies:
   flutter_test:
@@ -85,8 +85,8 @@ flutter:
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
-  #assets:
-    #- assets/images/
+  assets:
+    - assets/icons/
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

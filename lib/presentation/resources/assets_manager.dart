@@ -1,9 +1,9 @@
 const String imagePath = 'assets/images';
+const String iconPath = 'assets/icons';
 const String jsonPath = 'assets/jsons';
 
 class ImageAssets {
-  static const String jpg = '$imagePath/jpg.png';
-  static const String logo = '$imagePath/logo.png';
+  static const String pin = '$iconPath/pin.png';
 }
 
 class JsonAssets {

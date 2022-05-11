@@ -50,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "retryAgain":
             MessageLookupByLibrary.simpleMessage("Volver a intentarlo"),
         "sendEmail": MessageLookupByLibrary.simpleMessage("Enviar correo"),
-        "success": MessageLookupByLibrary.simpleMessage("Completo")
+        "success": MessageLookupByLibrary.simpleMessage("Completo"),
+        "typeBusiness": MessageLookupByLibrary.simpleMessage("Tipo de negocio")
       };
 }

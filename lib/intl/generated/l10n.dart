@@ -279,6 +279,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Tipo de negocio`
+  String get typeBusiness {
+    return Intl.message(
+      'Tipo de negocio',
+      name: 'typeBusiness',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

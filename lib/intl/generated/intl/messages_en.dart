@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Request permission"),
         "retryAgain": MessageLookupByLibrary.simpleMessage("Retry again"),
         "sendEmail": MessageLookupByLibrary.simpleMessage("Send email"),
-        "success": MessageLookupByLibrary.simpleMessage("Success")
+        "success": MessageLookupByLibrary.simpleMessage("Success"),
+        "typeBusiness": MessageLookupByLibrary.simpleMessage("Type Business")
       };
 }

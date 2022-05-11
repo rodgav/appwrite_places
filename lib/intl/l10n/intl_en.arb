@@ -22,5 +22,6 @@
   "inputName": "Name",
   "inputNameError": "Name error",
   "anonymous": "Anonymous",
-  "requestPermission": "Request permission"
+  "requestPermission": "Request permission",
+  "typeBusiness": "Type Business"
 }

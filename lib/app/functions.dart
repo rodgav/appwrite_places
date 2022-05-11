@@ -1,5 +1,6 @@
-import 'package:appwrite_places/domain/model/latitude_longitude.dart';
 import 'dart:math' as math;
+
+import 'package:mapbox_gl/mapbox_gl.dart';
 
 bool isEmailValid(String email) {
   return RegExp(

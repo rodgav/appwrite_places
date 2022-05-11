@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:appwrite/models.dart';
 import 'package:appwrite_places/data/network/app_api.dart';
 import 'package:appwrite_places/data/request/request.dart';
-import 'package:appwrite_places/domain/model/latitude_longitude.dart';
+import 'package:mapbox_gl/mapbox_gl.dart';
 
 abstract class RemoteDataSource {
   Future<Session> login(LoginRequest loginRequest);
@@ -18,7 +18,7 @@ abstract class RemoteDataSource {
 
   Future<File> createFile(Uint8List uint8list, String name);
 
-  Future<dynamic> deleteFile(String idFile);
+  Future<dynamic> deleteFile(String idFile); Future<DocumentList> typeBusiness();
 
   Future<DocumentList> places(LatLng north, LatLng east, LatLng south,
       LatLng west, String typeBusiness);
@@ -54,7 +54,8 @@ class RemoteDataSourceImpl implements RemoteDataSource {
 
   @override
   Future deleteFile(String idFile) => _appServiceClient.deleteFile(idFile);
-
+@override
+  Future<DocumentList> typeBusiness() =>_appServiceClient.typeBusiness();
   @override
   Future<DocumentList> places(LatLng north, LatLng east, LatLng south,
       LatLng west, String typeBusiness) =>

@@ -1,14 +1,16 @@
 import 'package:appwrite_places/data/network/failure.dart';
 import 'package:appwrite_places/domain/model/place.dart';
+import 'package:appwrite_places/domain/model/type_business.dart';
 import 'package:appwrite_places/domain/repository/repository.dart';
 import 'package:appwrite_places/domain/usecase/base_usecase.dart';
 import 'package:dartz/dartz.dart';
-import 'package:appwrite_places/domain/model/latitude_longitude.dart';
+import 'package:mapbox_gl/mapbox_gl.dart';
 
 class MainUseCase
     implements
         BaseUseCase<MainDeleteSessionUseCaseInput, dynamic>,
-        MainUseCasePlaces<MainUseCaseInputPlace, List<Place>> {
+        MainUseCasePlaces<MainUseCaseInputPlace, List<Place>>,
+        MainUseCaseTypeBusiness<void, List<TypeBusiness>> {
   final Repository _repository;
 
   MainUseCase(this._repository);
@@ -22,6 +24,10 @@ class MainUseCase
   Future<Either<Failure, List<Place>>> places(MainUseCaseInputPlace input) =>
       _repository.places(
           input.north, input.east, input.south, input.west, input.typeBusiness);
+
+  @override
+  Future<Either<Failure, List<TypeBusiness>>> typeBusiness(void input) =>
+      _repository.typeBusiness();
 }
 
 class MainDeleteSessionUseCaseInput {
@@ -40,4 +46,8 @@ class MainUseCaseInputPlace {
 
 abstract class MainUseCasePlaces<In, Out> {
   Future<Either<Failure, Out>> places(In input);
+}
+
+abstract class MainUseCaseTypeBusiness<In, Out> {
+  Future<Either<Failure, Out>> typeBusiness(In input);
 }

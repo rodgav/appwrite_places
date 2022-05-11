@@ -2,7 +2,6 @@ import 'package:appwrite_places/app/dependency_injection.dart';
 import 'package:appwrite_places/intl/generated/l10n.dart';
 import 'package:appwrite_places/presentation/common/state_render/state_render_impl.dart';
 import 'package:appwrite_places/presentation/global_widgets/responsive.dart';
-import 'package:appwrite_places/presentation/resources/assets_manager.dart';
 import 'package:appwrite_places/presentation/resources/color_manager.dart';
 import 'package:appwrite_places/presentation/resources/routes_manager.dart';
 import 'package:appwrite_places/presentation/resources/values_manager.dart';
@@ -83,11 +82,10 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                     child: Column(
                       children: [
                         const SizedBox(height: AppSize.s100),
-                        SizedBox(
+                        const  SizedBox(
                             width: AppSize.s250,
                             height: AppSize.s140,
-                            child: Image.asset(ImageAssets.logo,
-                                fit: BoxFit.cover)),
+                            child: Placeholder()),
                         const SizedBox(height: AppSize.s28),
                         StreamBuilder<bool>(
                             stream: _viewModel.outputUsernameValidate,
