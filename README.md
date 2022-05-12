@@ -1,4 +1,4 @@
-# appwrite_-_places
+# appwrite_places
 project presented by Rodolfo Samuel Gavilan Muñoz for the appwrite hackathon.
 * clean architecture
 * MVVM
